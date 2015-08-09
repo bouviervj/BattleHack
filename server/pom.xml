@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>BattleHack server </name>
+	<name>BattleHack server</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -303,13 +303,6 @@
 			<artifactId>commons-net</artifactId>
 			<version>3.3</version>
 		</dependency>
-		
-		
-        <dependency>
-            <groupId>com.att.m2x</groupId>
-            <artifactId>java</artifactId>
-            <version>3.0.0</version>
-        </dependency>
     
 
 		<!-- Normal features -->
@@ -382,13 +375,14 @@
 			<artifactId>httpmime</artifactId>
 			<version>4.4.1</version>
 		</dependency>
-
+        -->
+        
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.4.1</version>
 		</dependency>
-		-->
+		
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -396,6 +390,20 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+        
+        <dependency>
+            <groupId>com.braintreepayments.gateway</groupId>
+            <artifactId>braintree-java</artifactId>
+            <version>2.46.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.twilio.sdk</groupId>
+            <artifactId>twilio-java-sdk</artifactId>
+            <version>4.4.5</version>
+            <scope>compile</scope>
+        </dependency>
+        
 	</dependencies>
 
 
