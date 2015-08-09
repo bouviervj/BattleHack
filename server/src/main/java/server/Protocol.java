@@ -15,7 +15,6 @@ import server.transaction.Query;
 import server.transaction.Reply;
 import server.transaction.Device;
 
-
 public class Protocol {
 
 	private static final int WAITING = 0;
@@ -161,7 +160,4 @@ public class Protocol {
 		return hash;
 
 	}
-	
-
-
 }
