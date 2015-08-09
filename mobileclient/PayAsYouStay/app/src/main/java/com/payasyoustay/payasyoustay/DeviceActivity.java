@@ -73,7 +73,7 @@ public class DeviceActivity extends AppCompatActivity {
         final NumberPicker hourPicker = (NumberPicker)dialogView.findViewById(R.id.time_hour);
         hourPicker.setMaxValue(48);
         final NumberPicker minutePicker = (NumberPicker)dialogView.findViewById(R.id.time_minute);
-        minutePicker.setMaxValue(60);
+        minutePicker.setMaxValue(59);
         final TextView priceView = (TextView) dialogView.findViewById(R.id.price);
         hourPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
@@ -150,6 +150,14 @@ public class DeviceActivity extends AppCompatActivity {
 
     public void refresh(MenuItem item) {
         new Api().execute("getCounters");
+        TextView remainingTimeView = (TextView)findViewById(R.id.device_remaing_time);
+        if (remainingTimeView != null && mRole.equals("guest")) {
+            remainingTimeView.setText(mDevice.remainingTime.toString() + " h");
+        }
+        else {
+            LinearLayout manageCredit = (LinearLayout) findViewById(R.id.manageCredit);
+            manageCredit.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void activate(View view) {
