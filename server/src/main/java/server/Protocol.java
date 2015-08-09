@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.Vector;
 
 
+import server.business.Counters;
 import server.transaction.Action;
 import server.transaction.Query;
 import server.transaction.Reply;
 import server.transaction.Device;
-
 
 public class Protocol {
 
@@ -45,7 +45,9 @@ public class Protocol {
 						srv._thread = thread;
 					}
 					publishDevices(reply);
-				} 
+				} else if (reply.actions!=null) {
+					_repliesMap.put(reply.to, reply);
+				}
 			}
 
 		} 
@@ -56,6 +58,10 @@ public class Protocol {
 	public void publishDevices(Reply reply){
 
 		_deviceMap.put(reply.from, reply.devices);
+		
+		for (Device aDevice:reply.devices){
+			Counters._counters.put(aDevice.ID, 0);
+		}
 
 	}
 
@@ -154,7 +160,4 @@ public class Protocol {
 		return hash;
 
 	}
-	
-
-
 }
