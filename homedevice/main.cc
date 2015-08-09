@@ -28,6 +28,8 @@ int ledstate = 1;
 
 std::string deviceID;
 std::string ownerLogin;
+std::string name;
+std::string type;
 
 int init(){
 
@@ -197,7 +199,9 @@ void callbackReceiveMessage(net::socketconnect* sock, net::message* msg){
           JsonObject& objectLight = jsonNewBuffer.createObject();
           objectLight["ID"] = deviceID.c_str();
           objectLight["OWNER"] = ownerLogin.c_str();
-          
+	  objectLight["NAME"] = name.c_str();
+	  objectLight["TYPE"] = type.c_str();
+	  
           arrayData.add(objectLight);
 
           char buffer[500];
@@ -218,15 +222,19 @@ void callbackReceiveMessage(net::socketconnect* sock, net::message* msg){
 int main(int argc, char *argv[])
 {
 
-    if(argc <= 2)
+    if(argc <= 4)
     {
-        printf("\n Usage: %s <ip of server> <device id> <owner login>\n",argv[0]);
+        printf("\n Usage: %s <ip of server> <device id> <owner login> <name> <type>\n",argv[0]);
         return 1;
     } 
     
     deviceID = std::string(argv[2]);
     
     ownerLogin = std::string(argv[3]);
+    
+    name = std::string(argv[4]);
+    
+    type = std::string(argv[5]);
 
     init();
 
