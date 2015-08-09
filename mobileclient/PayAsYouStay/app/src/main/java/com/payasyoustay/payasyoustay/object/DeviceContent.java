@@ -1,9 +1,7 @@
 package com.payasyoustay.payasyoustay.object;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -11,39 +9,43 @@ import java.util.Map;
  * <p/>
  * TODO: Replace all uses of this class before publishing your app.
  */
-public class HouseContent {
+public class DeviceContent {
 
     /**
      * An array of sample (dummy) items.
      */
-    public static List<House> ITEMS = new ArrayList<House>();
+    public static List<Device> ITEMS = new ArrayList<Device>();
 
 
     static {
         // Add 3 sample items.
-        addItem(new House("Cap Cod", "282 Bradford St, Provincetown, MA 02657"));
-        addItem(new House("New York City", "Times Square Manhattan New York, NY 10036"));
+        addItem(new Device("Living room's light", "light", 60));
+        addItem(new Device("AC", "ac", 30));
     }
 
-    private static void addItem(House item) {
+    private static void addItem(Device item) {
         ITEMS.add(item);
     }
 
     /**
      * A dummy item representing a piece of content.
      */
-    public static class House {
+    public static class Device {
+        public String id;
         public String name;
-        public String address;
+        public String type;
+        public Integer remainingTime;
 
-        public House(String name, String address) {
+        public Device(String name, String type, Integer remainingTime) {
+            this.id = "";
             this.name = name;
-            this.address = address;
+            this.type = type;
+            this.remainingTime = remainingTime;
         }
 
         @Override
         public String toString() {
-            return name + "\n" + address;
+            return name + "\n" + remainingTime.toString() + " s remaining";
         }
     }
 }

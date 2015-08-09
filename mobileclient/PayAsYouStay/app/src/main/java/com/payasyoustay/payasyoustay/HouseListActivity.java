@@ -209,6 +209,9 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent intent = new Intent(getActivity(), DeviceListActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt("position", position);
+            intent.putExtras(bundle);
             getActivity().startActivity(intent);
         }
     }
