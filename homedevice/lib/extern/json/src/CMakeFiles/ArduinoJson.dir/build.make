@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/battlehack_client
+CMAKE_SOURCE_DIR = /root/BattleHack/homedevice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/battlehack_client
+CMAKE_BINARY_DIR = /root/BattleHack/homedevice
 
 # Include any dependencies generated for this target.
 include lib/extern/json/src/CMakeFiles/ArduinoJson.dir/depend.make
@@ -51,17 +51,17 @@ include lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o: lib/extern/json/src/JsonArray.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o -c /root/battlehack_client/lib/extern/json/src/JsonArray.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/JsonArray.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/JsonArray.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/JsonArray.cpp > CMakeFiles/ArduinoJson.dir/JsonArray.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/JsonArray.cpp > CMakeFiles/ArduinoJson.dir/JsonArray.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/JsonArray.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/JsonArray.cpp -o CMakeFiles/ArduinoJson.dir/JsonArray.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/JsonArray.cpp -o CMakeFiles/ArduinoJson.dir/JsonArray.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o.requires
@@ -74,17 +74,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o.provides.build: l
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o: lib/extern/json/src/Internals/JsonParser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o -c /root/battlehack_client/lib/extern/json/src/Internals/JsonParser.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/Internals/JsonParser.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/Internals/JsonParser.cpp > CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/Internals/JsonParser.cpp > CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/Internals/JsonParser.cpp -o CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/Internals/JsonParser.cpp -o CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o.requires
@@ -97,17 +97,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o.provid
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o: lib/extern/json/src/Internals/IndentedPrint.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o -c /root/battlehack_client/lib/extern/json/src/Internals/IndentedPrint.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/Internals/IndentedPrint.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/Internals/IndentedPrint.cpp > CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/Internals/IndentedPrint.cpp > CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/Internals/IndentedPrint.cpp -o CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/Internals/IndentedPrint.cpp -o CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o.requires
@@ -120,17 +120,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o.pro
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o: lib/extern/json/src/Internals/Prettyfier.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o -c /root/battlehack_client/lib/extern/json/src/Internals/Prettyfier.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/Internals/Prettyfier.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/Internals/Prettyfier.cpp > CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/Internals/Prettyfier.cpp > CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/Internals/Prettyfier.cpp -o CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/Internals/Prettyfier.cpp -o CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o.requires
@@ -143,17 +143,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o.provid
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o: lib/extern/json/src/Internals/QuotedString.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o -c /root/battlehack_client/lib/extern/json/src/Internals/QuotedString.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/Internals/QuotedString.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/Internals/QuotedString.cpp > CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/Internals/QuotedString.cpp > CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/Internals/QuotedString.cpp -o CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/Internals/QuotedString.cpp -o CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o.requires
@@ -166,17 +166,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o.prov
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o: lib/extern/json/src/Internals/List.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o -c /root/battlehack_client/lib/extern/json/src/Internals/List.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/Internals/List.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/Internals/List.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/Internals/List.cpp > CMakeFiles/ArduinoJson.dir/Internals/List.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/Internals/List.cpp > CMakeFiles/ArduinoJson.dir/Internals/List.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/Internals/List.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/Internals/List.cpp -o CMakeFiles/ArduinoJson.dir/Internals/List.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/Internals/List.cpp -o CMakeFiles/ArduinoJson.dir/Internals/List.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o.requires
@@ -189,17 +189,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o.provides.bui
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o: lib/extern/json/src/Internals/StringBuilder.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o -c /root/battlehack_client/lib/extern/json/src/Internals/StringBuilder.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/Internals/StringBuilder.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/Internals/StringBuilder.cpp > CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/Internals/StringBuilder.cpp > CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/Internals/StringBuilder.cpp -o CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/Internals/StringBuilder.cpp -o CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o.requires
@@ -212,17 +212,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o.pro
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o: lib/extern/json/src/DynamicJsonBuffer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o -c /root/battlehack_client/lib/extern/json/src/DynamicJsonBuffer.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/DynamicJsonBuffer.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/DynamicJsonBuffer.cpp > CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/DynamicJsonBuffer.cpp > CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/DynamicJsonBuffer.cpp -o CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/DynamicJsonBuffer.cpp -o CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o.requires
@@ -235,17 +235,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o.provides.
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o: lib/extern/json/src/JsonVariant.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o -c /root/battlehack_client/lib/extern/json/src/JsonVariant.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/JsonVariant.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/JsonVariant.cpp > CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/JsonVariant.cpp > CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/JsonVariant.cpp -o CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/JsonVariant.cpp -o CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o.requires
@@ -258,17 +258,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o.provides.build:
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o: lib/extern/json/src/JsonObject.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o -c /root/battlehack_client/lib/extern/json/src/JsonObject.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/JsonObject.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/JsonObject.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/JsonObject.cpp > CMakeFiles/ArduinoJson.dir/JsonObject.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/JsonObject.cpp > CMakeFiles/ArduinoJson.dir/JsonObject.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/JsonObject.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/JsonObject.cpp -o CMakeFiles/ArduinoJson.dir/JsonObject.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/JsonObject.cpp -o CMakeFiles/ArduinoJson.dir/JsonObject.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o.requires
@@ -281,17 +281,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o.provides.build: 
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o: lib/extern/json/src/JsonBuffer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o -c /root/battlehack_client/lib/extern/json/src/JsonBuffer.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/JsonBuffer.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/JsonBuffer.cpp > CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/JsonBuffer.cpp > CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/JsonBuffer.cpp -o CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/JsonBuffer.cpp -o CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o.requires
@@ -304,17 +304,17 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o.provides.build: 
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/flags.make
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o: lib/extern/json/src/Arduino/Print.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/battlehack_client/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/BattleHack/homedevice/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o -c /root/battlehack_client/lib/extern/json/src/Arduino/Print.cpp
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o -c /root/BattleHack/homedevice/lib/extern/json/src/Arduino/Print.cpp
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.i"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/battlehack_client/lib/extern/json/src/Arduino/Print.cpp > CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.i
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/BattleHack/homedevice/lib/extern/json/src/Arduino/Print.cpp > CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.i
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.s"
-	cd /root/battlehack_client/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/battlehack_client/lib/extern/json/src/Arduino/Print.cpp -o CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.s
+	cd /root/BattleHack/homedevice/lib/extern/json/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/BattleHack/homedevice/lib/extern/json/src/Arduino/Print.cpp -o CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.s
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o.requires:
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o.requires
@@ -358,8 +358,8 @@ lib/libArduinoJson.a: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Pri
 lib/libArduinoJson.a: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make
 lib/libArduinoJson.a: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../../../libArduinoJson.a"
-	cd /root/battlehack_client/lib/extern/json/src && $(CMAKE_COMMAND) -P CMakeFiles/ArduinoJson.dir/cmake_clean_target.cmake
-	cd /root/battlehack_client/lib/extern/json/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ArduinoJson.dir/link.txt --verbose=$(VERBOSE)
+	cd /root/BattleHack/homedevice/lib/extern/json/src && $(CMAKE_COMMAND) -P CMakeFiles/ArduinoJson.dir/cmake_clean_target.cmake
+	cd /root/BattleHack/homedevice/lib/extern/json/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ArduinoJson.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build: lib/libArduinoJson.a
@@ -380,10 +380,10 @@ lib/extern/json/src/CMakeFiles/ArduinoJson.dir/requires: lib/extern/json/src/CMa
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/requires
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/clean:
-	cd /root/battlehack_client/lib/extern/json/src && $(CMAKE_COMMAND) -P CMakeFiles/ArduinoJson.dir/cmake_clean.cmake
+	cd /root/BattleHack/homedevice/lib/extern/json/src && $(CMAKE_COMMAND) -P CMakeFiles/ArduinoJson.dir/cmake_clean.cmake
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/clean
 
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/depend:
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/battlehack_client /root/battlehack_client/lib/extern/json/src /root/battlehack_client /root/battlehack_client/lib/extern/json/src /root/battlehack_client/lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/BattleHack/homedevice /root/BattleHack/homedevice/lib/extern/json/src /root/BattleHack/homedevice /root/BattleHack/homedevice/lib/extern/json/src /root/BattleHack/homedevice/lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /root/battlehack_client/lib/extern/json
+# Install script for directory: /root/BattleHack/homedevice/lib/extern/json
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/root/battlehack_client/lib/extern/json/src/cmake_install.cmake")
+  INCLUDE("/root/BattleHack/homedevice/lib/extern/json/src/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

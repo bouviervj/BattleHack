@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/DynamicJsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/DynamicJsonBuffer.hpp
 JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
 stdlib.h
 -
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
 stddef.h
 -
 stdint.h
@@ -20,153 +20,153 @@ stdint.h
 Print.h
 -
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonVariantContent.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonVariantContent.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonVariantType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonVariantType.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonBuffer.hpp
 stddef.h
 -
 stdint.h
 -
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonVariant.hpp
 stddef.h
 -
 stdint.h
 -
 Internals/JsonPrintable.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonPrintable.hpp
 Internals/JsonVariantContent.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonVariantContent.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonVariantContent.hpp
 Internals/JsonVariantType.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonVariantType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Internals/JsonVariantType.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/DummyPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/DummyPrint.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/IndentedPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/IndentedPrint.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
 ../JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonBuffer.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonParser.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonParser.hpp
 ../JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonBuffer.hpp
 ../JsonVariant.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonVariant.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonPrintable.hpp
 DummyPrint.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/DummyPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/DummyPrint.hpp
 IndentedPrint.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/IndentedPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/IndentedPrint.hpp
 JsonWriter.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonWriter.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonWriter.hpp
 Prettyfier.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/Prettyfier.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/Prettyfier.hpp
 StringBuilder.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/StringBuilder.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/StringBuilder.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonVariantContent.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonVariantContent.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonVariantType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonVariantType.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonWriter.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonWriter.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
 QuotedString.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/QuotedString.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/QuotedString.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/List.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/List.hpp
 ../JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../JsonBuffer.hpp
 ListConstIterator.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ListConstIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ListConstIterator.hpp
 ListIterator.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ListIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ListIterator.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ListConstIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ListConstIterator.hpp
 ListNode.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ListNode.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ListNode.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ListIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ListIterator.hpp
 ListNode.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ListNode.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ListNode.hpp
 ListConstIterator.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ListConstIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ListConstIterator.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ListNode.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ListNode.hpp
 stddef.h
 -
 JsonBufferAllocated.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/Prettyfier.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/Prettyfier.hpp
 IndentedPrint.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/IndentedPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/IndentedPrint.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/QuotedString.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/QuotedString.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ReferenceType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ReferenceType.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/StringBuilder.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/StringBuilder.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/../Arduino/Print.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
 Internals/JsonBufferAllocated.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
 Internals/JsonPrintable.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonPrintable.hpp
 Internals/List.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/List.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/List.hpp
 Internals/ReferenceType.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ReferenceType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ReferenceType.hpp
 JsonVariant.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonVariant.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
 stddef.h
 -
 stdint.h
 -
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
 Internals/JsonBufferAllocated.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
 Internals/JsonPrintable.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonPrintable.hpp
 Internals/List.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/List.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/List.hpp
 Internals/ReferenceType.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/ReferenceType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/ReferenceType.hpp
 JsonPair.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonPair.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonPair.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonPair.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonPair.hpp
 JsonVariant.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonVariant.hpp
 
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonVariant.hpp
 stddef.h
 -
 stdint.h
 -
 Internals/JsonPrintable.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonPrintable.hpp
 Internals/JsonVariantContent.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonVariantContent.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonVariantContent.hpp
 Internals/JsonVariantType.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonVariantType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonVariantType.hpp
 
-/root/battlehack_client/lib/extern/json/src/Arduino/../../include/ArduinoJson/Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Arduino/../../include/ArduinoJson/Arduino/Print.hpp
 stddef.h
 -
 stdint.h
@@ -174,19 +174,19 @@ stdint.h
 Print.h
 -
 
-/root/battlehack_client/lib/extern/json/src/Arduino/Print.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/Arduino/Print.cpp
 ../../include/ArduinoJson/Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/Arduino/../../include/ArduinoJson/Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Arduino/../../include/ArduinoJson/Arduino/Print.hpp
 math.h
 -
 stdio.h
 -
 
-/root/battlehack_client/lib/extern/json/src/DynamicJsonBuffer.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/DynamicJsonBuffer.cpp
 ../include/ArduinoJson/DynamicJsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/DynamicJsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/DynamicJsonBuffer.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
 stddef.h
 -
 stdint.h
@@ -194,227 +194,227 @@ stdint.h
 Print.h
 -
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonVariantContent.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonVariantContent.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonVariantType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonVariantType.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonBuffer.hpp
 stddef.h
 -
 stdint.h
 -
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonVariant.hpp
 stddef.h
 -
 stdint.h
 -
 Internals/JsonPrintable.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonPrintable.hpp
 Internals/JsonVariantContent.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonVariantContent.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonVariantContent.hpp
 Internals/JsonVariantType.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonVariantType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Internals/JsonVariantType.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/DummyPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/DummyPrint.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/IndentedPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/IndentedPrint.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
 ../JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonBuffer.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonParser.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonParser.hpp
 ../JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonBuffer.hpp
 ../JsonVariant.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonVariant.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonPrintable.hpp
 DummyPrint.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/DummyPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/DummyPrint.hpp
 IndentedPrint.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/IndentedPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/IndentedPrint.hpp
 JsonWriter.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonWriter.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonWriter.hpp
 Prettyfier.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/Prettyfier.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/Prettyfier.hpp
 StringBuilder.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/StringBuilder.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/StringBuilder.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonVariantContent.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonVariantContent.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonVariantType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonVariantType.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonWriter.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonWriter.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
 QuotedString.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/QuotedString.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/QuotedString.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/List.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/List.hpp
 ../JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../JsonBuffer.hpp
 ListConstIterator.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListConstIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListConstIterator.hpp
 ListIterator.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListIterator.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListConstIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListConstIterator.hpp
 ListNode.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListNode.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListNode.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListIterator.hpp
 ListNode.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListNode.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListNode.hpp
 ListConstIterator.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListConstIterator.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListConstIterator.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListNode.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ListNode.hpp
 stddef.h
 -
 JsonBufferAllocated.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/Prettyfier.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/Prettyfier.hpp
 IndentedPrint.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/IndentedPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/IndentedPrint.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/QuotedString.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/QuotedString.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ReferenceType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ReferenceType.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/StringBuilder.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/StringBuilder.hpp
 ../Arduino/Print.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/../Arduino/Print.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonArray.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonArray.hpp
 Internals/JsonBufferAllocated.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
 Internals/JsonPrintable.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonPrintable.hpp
 Internals/List.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/List.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/List.hpp
 Internals/ReferenceType.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ReferenceType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ReferenceType.hpp
 JsonVariant.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonVariant.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonBuffer.hpp
 stddef.h
 -
 stdint.h
 -
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonObject.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonObject.hpp
 Internals/JsonBufferAllocated.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonBufferAllocated.hpp
 Internals/JsonPrintable.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonPrintable.hpp
 Internals/List.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/List.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/List.hpp
 Internals/ReferenceType.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ReferenceType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/ReferenceType.hpp
 JsonPair.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonPair.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonPair.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonPair.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonPair.hpp
 JsonVariant.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonVariant.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonVariant.hpp
 stddef.h
 -
 stdint.h
 -
 Internals/JsonPrintable.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonPrintable.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonPrintable.hpp
 Internals/JsonVariantContent.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonVariantContent.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonVariantContent.hpp
 Internals/JsonVariantType.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonVariantType.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonVariantType.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/IndentedPrint.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/IndentedPrint.cpp
 ../../include/ArduinoJson/Internals/IndentedPrint.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/IndentedPrint.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/IndentedPrint.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/JsonParser.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/JsonParser.cpp
 ../../include/ArduinoJson/Internals/JsonParser.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonParser.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/JsonParser.hpp
 stdlib.h
 -
 ctype.h
 -
 ../../include/ArduinoJson/Internals/QuotedString.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/QuotedString.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/QuotedString.hpp
 ../../include/ArduinoJson/JsonArray.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonArray.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonArray.hpp
 ../../include/ArduinoJson/JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonBuffer.hpp
 ../../include/ArduinoJson/JsonObject.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonObject.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonObject.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/List.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/List.cpp
 ../../include/ArduinoJson/Internals/List.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/List.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/List.hpp
 ../../include/ArduinoJson/JsonPair.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonPair.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonPair.hpp
 ../../include/ArduinoJson/JsonVariant.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/JsonVariant.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/Prettyfier.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/Prettyfier.cpp
 ../../include/ArduinoJson/Internals/Prettyfier.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/Prettyfier.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/Prettyfier.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/QuotedString.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/QuotedString.cpp
 ../../include/ArduinoJson/Internals/QuotedString.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/QuotedString.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/QuotedString.hpp
 
-/root/battlehack_client/lib/extern/json/src/Internals/StringBuilder.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/StringBuilder.cpp
 ../../include/ArduinoJson/Internals/StringBuilder.hpp
-/root/battlehack_client/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/StringBuilder.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/Internals/../../include/ArduinoJson/Internals/StringBuilder.hpp
 
-/root/battlehack_client/lib/extern/json/src/JsonArray.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/JsonArray.cpp
 ../include/ArduinoJson/JsonArray.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
 ../include/ArduinoJson/JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
 ../include/ArduinoJson/JsonObject.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
 
-/root/battlehack_client/lib/extern/json/src/JsonBuffer.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/JsonBuffer.cpp
 ../include/ArduinoJson/JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
 ../include/ArduinoJson/Internals/JsonParser.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/JsonParser.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/JsonParser.hpp
 ../include/ArduinoJson/JsonArray.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
 ../include/ArduinoJson/JsonObject.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
 
-/root/battlehack_client/lib/extern/json/src/JsonObject.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/JsonObject.cpp
 ../include/ArduinoJson/JsonObject.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
 string.h
 -
 ../include/ArduinoJson/Internals/StringBuilder.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/Internals/StringBuilder.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/Internals/StringBuilder.hpp
 ../include/ArduinoJson/JsonArray.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
 ../include/ArduinoJson/JsonBuffer.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonBuffer.hpp
 
-/root/battlehack_client/lib/extern/json/src/JsonVariant.cpp
+/root/BattleHack/homedevice/lib/extern/json/src/JsonVariant.cpp
 ../include/ArduinoJson/JsonVariant.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonVariant.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonVariant.hpp
 ../include/ArduinoJson/JsonArray.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonArray.hpp
 ../include/ArduinoJson/JsonObject.hpp
-/root/battlehack_client/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
+/root/BattleHack/homedevice/lib/extern/json/src/../include/ArduinoJson/JsonObject.hpp
 

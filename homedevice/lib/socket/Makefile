@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/battlehack_client
+CMAKE_SOURCE_DIR = /root/BattleHack/homedevice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/battlehack_client
+CMAKE_BINARY_DIR = /root/BattleHack/homedevice
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -E cmake_progress_start /root/battlehack_client/CMakeFiles /root/battlehack_client/lib/socket/CMakeFiles/progress.marks
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/battlehack_client/CMakeFiles 0
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -E cmake_progress_start /root/BattleHack/homedevice/CMakeFiles /root/BattleHack/homedevice/lib/socket/CMakeFiles/progress.marks
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/BattleHack/homedevice/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/clean
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/preinstall
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/preinstall
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/socket/CMakeFiles/socket.dir/rule:
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/CMakeFiles/socket.dir/rule
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/socket/CMakeFiles/socket.dir/rule
 .PHONY : lib/socket/CMakeFiles/socket.dir/rule
 
 # Convenience name for target.
@@ -109,7 +109,7 @@ socket: lib/socket/CMakeFiles/socket.dir/rule
 
 # fast build rule for target.
 socket/fast:
-	cd /root/battlehack_client && $(MAKE) -f lib/socket/CMakeFiles/socket.dir/build.make lib/socket/CMakeFiles/socket.dir/build
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/socket/CMakeFiles/socket.dir/build.make lib/socket/CMakeFiles/socket.dir/build
 .PHONY : socket/fast
 
 socket.o: socket.cpp.o
@@ -117,7 +117,7 @@ socket.o: socket.cpp.o
 
 # target to build an object file
 socket.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/socket/CMakeFiles/socket.dir/build.make lib/socket/CMakeFiles/socket.dir/socket.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/socket/CMakeFiles/socket.dir/build.make lib/socket/CMakeFiles/socket.dir/socket.cpp.o
 .PHONY : socket.cpp.o
 
 socket.i: socket.cpp.i
@@ -125,7 +125,7 @@ socket.i: socket.cpp.i
 
 # target to preprocess a source file
 socket.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/socket/CMakeFiles/socket.dir/build.make lib/socket/CMakeFiles/socket.dir/socket.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/socket/CMakeFiles/socket.dir/build.make lib/socket/CMakeFiles/socket.dir/socket.cpp.i
 .PHONY : socket.cpp.i
 
 socket.s: socket.cpp.s
@@ -133,7 +133,7 @@ socket.s: socket.cpp.s
 
 # target to generate assembly for a file
 socket.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/socket/CMakeFiles/socket.dir/build.make lib/socket/CMakeFiles/socket.dir/socket.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/socket/CMakeFiles/socket.dir/build.make lib/socket/CMakeFiles/socket.dir/socket.cpp.s
 .PHONY : socket.cpp.s
 
 # Help Target
@@ -159,6 +159,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
