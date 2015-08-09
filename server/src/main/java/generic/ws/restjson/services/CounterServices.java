@@ -20,7 +20,7 @@ import server.Protocol;
 import server.transaction.Reply;
 import server.transaction.Device;
 
-@Path("/v1/dev")
+@Path("/v1/counter")
 public class CounterServices {
 
 	protected static final Logger LOGGER = Logger.getLogger(CounterServices.class.getName());
@@ -32,44 +32,6 @@ public class CounterServices {
 		LOGGER.info("Retrieve devices ...");
 		return Protocol._deviceMap;
 	}
-			
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("/deviceActivate/{id}/{time}")
-	public Object deviceActivate( @Context SecurityContext sc,
-								  @PathParam("id") String iDeviceID,
-								  @PathParam("time") int iTime) { 
-		
-		Protocol.callDevices(iDeviceID, "activate", iTime);
-		return "OK";
-	}
-	
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("/deviceDeactivate/{id}")
-	public Object deviceDeactivate( @Context SecurityContext sc,
-								  @PathParam("id") String iDeviceID) { 
-		
-		String iHash = Protocol.callDevices(iDeviceID, "deactivate", 0);
-		Reply aReply = Protocol.waitForMessage(iHash);
-		return "OK";
-	}
-	
-	
-	@GET
-	@Produces(MediaType.APPLICATION_OCTET_STREAM)
-	@Path("/{state}/otherMIME/")
-	public byte[] simpleOtherMIMEType( @Context SecurityContext sc, @PathParam("state") String iState) throws Exception {
-		try {
-			return "Stream".getBytes();
-		} catch (Exception e) {
-			LOGGER.info("Simple Error");
-			throw new NotFoundException(e.getMessage());		
-		}
-		
-	}
-	
+
 	
 }

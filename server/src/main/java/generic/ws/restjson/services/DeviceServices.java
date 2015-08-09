@@ -17,6 +17,7 @@ import javax.ws.rs.core.SecurityContext;
 import org.apache.log4j.Logger;
 
 import server.Protocol;
+import server.business.Counters;
 import server.transaction.Reply;
 import server.transaction.Device;
 
@@ -41,7 +42,10 @@ public class DeviceServices {
 								  @PathParam("id") String iDeviceID,
 								  @PathParam("time") int iTime) { 
 		
-		Protocol.callDevices(iDeviceID, "activate", iTime);
+		int time = Counters._counters.get(iDeviceID)-iTime;
+		time = time < 0?Counters._counters.get(iDeviceID):iTime;
+		Counters.removeTime(iDeviceID, time);
+		Protocol.callDevices(iDeviceID, "activate", time);
 		return "OK";
 	}
 	
@@ -49,12 +53,19 @@ public class DeviceServices {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/deviceDeactivate/{id}")
-	public Object deviceDeactivate( @Context SecurityContext sc,
+	public String deviceDeactivate( @Context SecurityContext sc,
 								  @PathParam("id") String iDeviceID) { 
 		
 		String iHash = Protocol.callDevices(iDeviceID, "deactivate", 0);
 		Reply aReply = Protocol.waitForMessage(iHash);
-		return "OK";
+		if (aReply.actions.size()>0) {
+			
+			// TODO Update counters
+			Counters.addTime(iDeviceID, aReply.actions.get(0).rest);
+			
+			return ""+aReply.actions.get(0).rest;
+		}
+		return ""+-1;
 	}
 	
 	
