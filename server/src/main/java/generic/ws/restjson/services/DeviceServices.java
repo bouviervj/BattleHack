@@ -50,10 +50,10 @@ public class DeviceServices {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/deviceDeactivate/{id}")
 	public Object deviceDeactivate( @Context SecurityContext sc,
-								  @PathParam("id") String iDeviceID,
-								  @PathParam("time") int iTime) { 
+								  @PathParam("id") String iDeviceID) { 
 		
-		Protocol.callDevices(iDeviceID, "activate", iTime);
+		String iHash = Protocol.callDevices(iDeviceID, "deactivate", 0);
+		Reply aReply = Protocol.waitForMessage(iHash);
 		return "OK";
 	}
 	
