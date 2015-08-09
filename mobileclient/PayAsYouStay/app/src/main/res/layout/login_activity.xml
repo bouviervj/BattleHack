@@ -42,7 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textSize="40px"/>
+            android:textSize="40px"
+            android:onClick="login"/>
 
     </LinearLayout>
 </RelativeLayout>
