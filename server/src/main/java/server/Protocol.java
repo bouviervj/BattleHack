@@ -67,7 +67,7 @@ public class Protocol {
 
 	public static String timeHash(){
 
-		String aDate = (new Date()).toString();
+		String aDate = ""+(new Date()).getTime();
 
 		MessageDigest md;
 		try {
