@@ -67,7 +67,7 @@ public class Protocol {
 
 	public static String timeHash(){
 
-		String aDate = (new Date()).toString();
+		String aDate = ""+(new Date()).getTime();
 
 		MessageDigest md;
 		try {
@@ -111,8 +111,13 @@ public class Protocol {
 	
 	public static Reply waitForMessage(String iHash){
 		
+		int count = 10;
 		boolean found = false;
 		while (!found) {
+			if (count==0){
+				break;
+			}
+			
 			if (_repliesMap.containsKey(iHash)) {
 				found = true;
 			} else {
@@ -123,8 +128,9 @@ public class Protocol {
 					e.printStackTrace();
 				}
 			}
+			count--;
 		}
-		return _repliesMap.get(iHash);
+		return count==0?null:_repliesMap.get(iHash);
 		
 	}
 	

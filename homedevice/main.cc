@@ -83,6 +83,7 @@ std::string getDeviceName(){
 
 int waitingTime = 0;
 time_t beginCounter = 0;
+int count = 0;
 
 void* staticWaitThread(void* pt){
 
@@ -91,7 +92,11 @@ void* staticWaitThread(void* pt){
     ledstate = 1;        
     mraa_gpio_write(gpio, ledstate); 
     
-    sleep(waitingTime);	
+    count = waitingTime;
+    while (count>0) {
+    	sleep(1);
+	count--;	
+    }
     
     ledstate = 0;        
     mraa_gpio_write(gpio, ledstate); 
@@ -139,6 +144,35 @@ void executeAction(const std::string& id, const std::string& actioncode, int tim
         objectTemperature["rest"] = waitingTime-diff;
 	beginCounter = 0;
 	waitingTime = 0;
+	count = 0;
+        arrayData.add(objectTemperature);
+  
+        char buffer[500];
+        memset(buffer, 0, sizeof(buffer));
+        rootNew.printTo(buffer, sizeof(buffer));
+
+        msg->_payload = std::string(buffer, strlen(buffer));
+        sock->sendMessage(msg);
+		
+    }
+    
+    if (strcmp(actioncode.c_str(),"counter")==0) {
+       
+        std::string name = getDeviceName();
+
+        msg->_type = 1;
+
+        DynamicJsonBuffer jsonNewBuffer;
+
+        JsonObject& rootNew = jsonNewBuffer.createObject();
+        rootNew["from"] = name.c_str();
+        rootNew["to"] = from.c_str();
+
+        JsonArray& arrayData = rootNew.createNestedArray("actions");
+  
+        JsonObject& objectTemperature = jsonNewBuffer.createObject();
+        objectTemperature["rest"] = count;
+	
         arrayData.add(objectTemperature);
   
         char buffer[500];

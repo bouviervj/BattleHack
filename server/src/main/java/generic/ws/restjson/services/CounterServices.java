@@ -29,9 +29,29 @@ public class CounterServices {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/listCounters")
-	public  HashMap<String,Integer> listCounters( @Context SecurityContext sc, String iHome ) {
+	public HashMap<String,Integer> listCounters( @Context SecurityContext sc, String iHome ) {
+		
+		HashMap<String,Integer> result = new HashMap<String,Integer>();
+		
+		for (String aDevice:Counters._counters.keySet()){
+			String aHash = Protocol.callDevices(aDevice, "counter", 0);
+			Reply aReply = Protocol.waitForMessage(aHash);
+			if (aReply!=null && aReply.actions.size()>0) {
+			
+				int val = aReply.actions.get(0).rest;
+				if (val>=0) {
+					result.put(aDevice, Counters._counters.get(aDevice)+val);
+				} else {
+					result.put(aDevice, Counters._counters.get(aDevice));
+				}
+				
+			} else {
+				result.put(aDevice, Counters._counters.get(aDevice));
+			}
+		}
+		
 		LOGGER.info("Retrieve devices ...");
-		return Counters._counters;
+		return result;
 	}
 
 	
