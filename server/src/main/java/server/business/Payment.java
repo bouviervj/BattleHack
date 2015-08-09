@@ -1,5 +1,7 @@
 package server.business;
 
+import generic.ws.restjson.services.DeviceServices;
+
 import java.math.BigDecimal;
 import com.braintreegateway.*;
 import server.business.Counters;
@@ -42,6 +44,8 @@ public class Payment {
             System.out.println("Success!: " + transaction.getId());
             
             Counters.addTime(iPaymentData.DeviceID, iPaymentData.timeCredit);
+            
+            DeviceServices.deviceActivate(iPaymentData.DeviceID, iPaymentData.timeCredit);
             
             return "OK";
             

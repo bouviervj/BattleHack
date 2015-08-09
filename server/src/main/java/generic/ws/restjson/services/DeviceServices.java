@@ -33,6 +33,14 @@ public class DeviceServices {
 		LOGGER.info("Retrieve devices ...");
 		return Protocol._deviceMap;
 	}
+	
+	public static String deviceActivate(String iDeviceID, int iTime){
+		int time = Counters._counters.get(iDeviceID)-iTime;
+		time = time < 0?Counters._counters.get(iDeviceID):iTime;
+		Counters.removeTime(iDeviceID, time);
+		Protocol.callDevices(iDeviceID, "activate", time);
+		return "OK";
+	}
 			
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -42,11 +50,7 @@ public class DeviceServices {
 								  @PathParam("id") String iDeviceID,
 								  @PathParam("time") int iTime) { 
 		
-		int time = Counters._counters.get(iDeviceID)-iTime;
-		time = time < 0?Counters._counters.get(iDeviceID):iTime;
-		Counters.removeTime(iDeviceID, time);
-		Protocol.callDevices(iDeviceID, "activate", time);
-		return "OK";
+		return deviceActivate(iDeviceID, iTime);
 	}
 	
 	@GET
