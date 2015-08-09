@@ -1,9 +1,12 @@
 package com.payasyoustay.payasyoustay;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -33,5 +36,16 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void login(View view) {
+        if (true) {
+            Intent intent = new Intent(this, HouseListActivity.class);
+            startActivity(intent);
+        }
+        else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Login Failed!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 }
