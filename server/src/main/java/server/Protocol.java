@@ -60,7 +60,7 @@ public class Protocol {
 		_deviceMap.put(reply.from, reply.devices);
 		
 		for (Device aDevice:reply.devices){
-			Counters._counters.put(aDevice.ID, "light".equals(aDevice.TYPE)?20:0);
+			Counters._counters.put(aDevice.ID, 0);
 		}
 
 	}
