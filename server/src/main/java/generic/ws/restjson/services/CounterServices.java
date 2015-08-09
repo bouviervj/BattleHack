@@ -17,6 +17,7 @@ import javax.ws.rs.core.SecurityContext;
 import org.apache.log4j.Logger;
 
 import server.Protocol;
+import server.business.Counters;
 import server.transaction.Reply;
 import server.transaction.Device;
 
@@ -27,10 +28,10 @@ public class CounterServices {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/devices")
-	public  HashMap<String,Vector<Device>> devicess( @Context SecurityContext sc ) {
+	@Path("/listCounters")
+	public  HashMap<String,Integer> listCounters( @Context SecurityContext sc, String iHome ) {
 		LOGGER.info("Retrieve devices ...");
-		return Protocol._deviceMap;
+		return Counters._counters;
 	}
 
 	
