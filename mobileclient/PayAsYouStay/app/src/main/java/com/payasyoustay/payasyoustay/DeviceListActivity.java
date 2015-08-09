@@ -2,8 +2,11 @@ package com.payasyoustay.payasyoustay;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,9 +24,13 @@ import android.widget.Toast;
 import com.payasyoustay.payasyoustay.object.DeviceContent;
 import com.payasyoustay.payasyoustay.object.HouseContent;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
 import java.util.List;
 
-public class DeviceListActivity extends ListActivity implements AbsListView.OnItemClickListener {
+public class DeviceListActivity extends AppCompatActivity implements AbsListView.OnItemClickListener {
 
     private HouseContent.House mHouse;
 
@@ -42,13 +49,17 @@ public class DeviceListActivity extends ListActivity implements AbsListView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_devise_list);
+        new Api(this).execute("/ws/api/v1/dev/devices");
 
         Bundle bundle = getIntent().getExtras();
-        int position = bundle.getInt("position");
-        mHouse = HouseContent.ITEMS.get(position);
+        if (bundle != null && bundle.containsKey("position")) {
+            int position = bundle.getInt("position");
+            mHouse = HouseContent.ITEMS.get(position);
+        }
 
-        mAdapter = new DeviceArrayAdapter(this, DeviceContent.ITEMS);
-        setListAdapter(mAdapter);
+        mListView = (ListView) findViewById(android.R.id.list);
+        mListView.setOnItemClickListener(this);
+
     }
 
 
@@ -76,7 +87,11 @@ public class DeviceListActivity extends ListActivity implements AbsListView.OnIt
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Intent intent = new Intent(this, DeviceActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("position", position);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 
     public class DeviceArrayAdapter extends ArrayAdapter<DeviceContent.Device> {
@@ -99,8 +114,8 @@ public class DeviceListActivity extends ListActivity implements AbsListView.OnIt
             DeviceContent.Device device = values.get(position);
             textView.setText(device.toString());
 
-
-            if (device.type == "ac") {
+            Log.d("DeviceList", device.type);
+            if (device.type.equals("ac")) {
                 imageView.setImageResource(R.drawable.ac);
             } else {
                 imageView.setImageResource(R.drawable.light);
@@ -108,4 +123,33 @@ public class DeviceListActivity extends ListActivity implements AbsListView.OnIt
             return rowView;
         }
     }
+    public class Api extends AsyncTask<String, Void, JSONObject> {
+
+        Context mContext;
+
+        public Api(Context context) {
+            this.mContext = context;
+        }
+        protected JSONObject doInBackground(String... urls) {
+            try {
+
+            RestClient restClient = new RestClient();
+            JSONObject json = restClient.get(urls[0]);
+            DeviceContent.update(json);
+            return json;
+            }
+            catch (Exception e) {
+                Log.e("DeviceList", e.toString());
+            }
+            return new JSONObject();
+        }
+
+    protected void onPostExecute(JSONObject result) {
+        Log.d("DeviceList", "onPostExecute");
+        mAdapter = new DeviceArrayAdapter(mContext, DeviceContent.ITEMS);
+        mListView.setAdapter(mAdapter);
+    }
+
+    }
+
 }

@@ -8,4 +8,8 @@
     <string name="title_section1">Host</string>
     <string name="title_section2">Guest</string>
     <string name="title_activity_device_list">Available Services</string>
+
+    <string name="title_activity_device">Service Details</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

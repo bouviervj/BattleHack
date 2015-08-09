@@ -3,6 +3,7 @@ package com.payasyoustay.payasyoustay;
 import java.util.Locale;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -24,8 +25,11 @@ import android.widget.ListView;
 
 import com.payasyoustay.payasyoustay.object.HouseContent;
 
+import org.json.JSONObject;
+
 public class HouseListActivity extends AppCompatActivity implements ActionBar.TabListener {
 
+    String mUser;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -45,6 +49,11 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_house_list);
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null && bundle.containsKey("user")) {
+            mUser = bundle.getString("user");
+        }
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -80,6 +89,7 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
                             .setTabListener(this));
         }
     }
+
 
 
     @Override
@@ -153,6 +163,8 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
             }
             return null;
         }
+
+
     }
 
     /**
