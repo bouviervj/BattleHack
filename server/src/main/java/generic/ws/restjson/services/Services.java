@@ -33,13 +33,16 @@ public class Services {
 		return Protocol._deviceMap;
 	}
 			
-	@POST
+	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("/simplePost")
-	public Object simplePost( @Context SecurityContext sc,
-									   String[] iList) { 
-		return null;
+	@Path("/deviceActivate/{id}/{time}")
+	public Object deviceActivate( @Context SecurityContext sc,
+								  @PathParam("id") String iDeviceID,
+								  @PathParam("time") int iTime) { 
+		
+		Protocol.callDevices(iDeviceID, "activate", iTime);
+		return "OK";
 	}
 	
 	@GET

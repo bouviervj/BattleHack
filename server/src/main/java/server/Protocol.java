@@ -122,7 +122,7 @@ public class Protocol {
 		
 	}
 	
-	public static String callDevices(String iID, String iActionCode){
+	public static String callDevices(String iID, String iActionCode, int iTime){
 
 		String hash = timeHash();
 		
@@ -134,6 +134,7 @@ public class Protocol {
 					Action act = new Action();
 					act.id = iID;
 					act.actioncode = iActionCode;
+					act.time = iTime;
 
 					Query aQuery = new Query();
 					aQuery.from = hash;
