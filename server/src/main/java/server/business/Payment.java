@@ -2,6 +2,8 @@ package server.business;
 
 import java.math.BigDecimal;
 import com.braintreegateway.*;
+import server.business.Counters;
+
 
 public class Payment {
 
@@ -22,6 +24,10 @@ public class Payment {
     
     
     public static String processPayment(Payment iPaymentData){
+        
+        if(!Counters._counters.containsKey(iPaymentData.DeviceID))
+            return "KO";
+        
         TransactionRequest request = new TransactionRequest().
         amount(new BigDecimal(iPaymentData.amountToPay)).
         creditCard().
@@ -34,6 +40,9 @@ public class Payment {
         if (result.isSuccess()) {
             Transaction transaction = result.getTarget();
             System.out.println("Success!: " + transaction.getId());
+            
+            Counters.addTime(iPaymentData.DeviceID, iPaymentData.timeCredit);
+            
             return "OK";
             
         } else if (result.getTransaction() != null) {
