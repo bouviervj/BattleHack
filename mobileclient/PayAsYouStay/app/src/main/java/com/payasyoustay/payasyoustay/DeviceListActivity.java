@@ -1,25 +1,23 @@
 package com.payasyoustay.payasyoustay;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class DeviceListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_activity);
+        setContentView(R.layout.activity_devise_list);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_house, menu);
         return true;
     }
 
@@ -36,16 +34,5 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void login(View view) {
-        if (true) {
-            Intent intent = new Intent(this, HouseListActivity.class);
-            startActivity(intent);
-        }
-        else {
-            Toast toast = Toast.makeText(getApplicationContext(), "Login Failed!", Toast.LENGTH_SHORT);
-            toast.show();
-        }
     }
 }
