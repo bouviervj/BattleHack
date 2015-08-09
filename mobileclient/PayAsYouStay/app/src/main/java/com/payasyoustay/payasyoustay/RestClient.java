@@ -80,7 +80,7 @@ public class RestClient {
         }
         String result = stringBuilder.toString();
         Log.d("RestClient", "JsonDoc: " + result);
-        if (result.equals("OK")) {
+        if (result.toLowerCase().equals("ok")) {
             result = "{\"result\":\"OK\"}";
         }
         return result;
@@ -91,6 +91,7 @@ public class RestClient {
         if (!mServerHost.isEmpty() && !mServerPort.isEmpty()) {
             try {
                 String url = "http://" + mServerHost + ":" + mServerPort + path;
+                Log.d("RestClient", "GET " + path);
                 json = new JSONObject(readJSONFeed(url, false));
             } catch (Exception e) {
                 Log.d("RestClient", "Error " + e.getMessage());
@@ -103,6 +104,7 @@ public class RestClient {
         if (!mServerHost.isEmpty() && !mServerPort.isEmpty()) {
             try {
                 String url = "http://" + mServerHost + ":" + mServerPort + path;
+                Log.d("RestClient", "POST " + path);
                 json = new JSONObject(readJSONFeed(url, true));
             } catch (Exception e) {
                 Log.d("RestClient", "Error " + e.getMessage());

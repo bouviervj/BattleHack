@@ -28,7 +28,7 @@
             android:inputType="textPersonName"
             android:maxLines="1"
             android:gravity="center"
-            android:text="Roger"
+            android:text="roger"
             android:id="@+id/user"/>
         <TextView
             android:layout_width="match_parent"

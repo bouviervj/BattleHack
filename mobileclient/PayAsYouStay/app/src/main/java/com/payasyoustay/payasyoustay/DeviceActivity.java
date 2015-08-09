@@ -11,7 +11,9 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
@@ -21,13 +23,16 @@ import org.json.JSONObject;
 
 public class DeviceActivity extends AppCompatActivity {
 
-    DeviceContent.Device mDevice;
+    private DeviceContent.Device mDevice;
+    private String mRole;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
         if (bundle != null && bundle.containsKey("position")) {
             int position = bundle.getInt("position");
+            mRole = bundle.getString("role");
             mDevice = DeviceContent.ITEMS.get(position);
         }
         setContentView(R.layout.activity_device);
@@ -43,7 +48,14 @@ public class DeviceActivity extends AppCompatActivity {
         TextView priceView = (TextView)findViewById(R.id.price_per_second);
         priceView.setText(mDevice.pricePerHour.toString() + "$/h");
         TextView remainingTimeView = (TextView)findViewById(R.id.device_remaing_time);
-        remainingTimeView.setText(mDevice.remainingTime.toString() + " m");
+        if (mRole.equals("guest")) {
+            remainingTimeView.setText(mDevice.remainingTime.toString() + " m");
+        }
+        else {
+            LinearLayout manageCredit = (LinearLayout) findViewById(R.id.manageCredit);
+            manageCredit.setVisibility(View.INVISIBLE);
+        }
+
 
     }
 
@@ -78,8 +90,8 @@ public class DeviceActivity extends AppCompatActivity {
                     // Time Credit
                     NumberPicker hourPicker = (NumberPicker)dialogView.findViewById(R.id.time_hour);
                     NumberPicker minutePicker = (NumberPicker)dialogView.findViewById(R.id.time_minute);
-                    Integer timeCredit = hourPicker.getValue() + minutePicker.getValue() / 60;
-                    json.put("timeCredit", timeCredit);
+                    Integer timeCredit = hourPicker.getValue() * 60 + minutePicker.getValue();
+                    json.put("timeCredit", timeCredit / 60);
 
                     // Price amount
                     Double amount = timeCredit / 60 * mDevice.pricePerHour;
@@ -98,7 +110,7 @@ public class DeviceActivity extends AppCompatActivity {
                     Log.d("DeviceActivity", "Json POST " + json.toString());
 
                     // Post
-                    new Api(json).execute("/ws/api/v1/pay/creditcardpay");
+                    new Api(json).execute("creditcardpay");
 
                 }
                 catch(Exception e) {
@@ -119,11 +131,22 @@ public class DeviceActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    public void refresh(MenuItem item) {
+        new Api().execute("getCounters");
+    }
+
+    public void activate(View view) {
+        new Api().execute("activate");
+    }
+
+    public void stop(View view) {
+        new Api().execute("stop");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_device, menu);
+        getMenuInflater().inflate(R.menu.menu_device, menu);
         return true;
     }
 
@@ -148,13 +171,33 @@ public class DeviceActivity extends AppCompatActivity {
         public Api(JSONObject json) {
             mJson = json;
         }
+        public Api() {
+            mJson = new JSONObject();
+        }
 
-        protected JSONObject doInBackground(String... urls) {
+        protected JSONObject doInBackground(String... services) {
             try {
 
-                RestClient restClient = new RestClient(mJson);
-                JSONObject json = restClient.post(urls[0]);
-                return json;
+                if (services[0].equals("creditcardpay")) {
+                    RestClient restClient = new RestClient(mJson);
+                    JSONObject json = restClient.post("/ws/api/v1/pay/creditcardpay");
+                    return json;
+                }
+                else if(services[0].equals("activate")) {
+                    RestClient restClient = new RestClient();
+                    JSONObject json = restClient.get("/ws/api/v1/deviceActivate/" + mDevice.id + "/" + mDevice.remainingTime.toString());
+                }
+                else if(services[0].equals("stop")) {
+                    RestClient restClient = new RestClient();
+                    JSONObject json = restClient.get("/ws/api/v1/deviceDeactivate/" + mDevice.id);
+                }
+                else if (services[0].equals("getCounters")) {
+                    RestClient restClient = new RestClient();
+                    JSONObject jsonCoutners = restClient.get("/ws/api/v1/counter/listCounters");
+                    DeviceContent.updateCounters(jsonCoutners);
+                    return jsonCoutners;
+                }
+                return new JSONObject();
             } catch (Exception e) {
                 Log.e("DeviceList", e.toString());
             }
