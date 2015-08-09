@@ -49,12 +49,19 @@ public class DeviceServices {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/deviceDeactivate/{id}")
-	public Object deviceDeactivate( @Context SecurityContext sc,
+	public String deviceDeactivate( @Context SecurityContext sc,
 								  @PathParam("id") String iDeviceID) { 
 		
 		String iHash = Protocol.callDevices(iDeviceID, "deactivate", 0);
 		Reply aReply = Protocol.waitForMessage(iHash);
-		return "OK";
+		if (aReply.actions.size()>0) {
+			
+			// TODO Update counters
+			
+			
+			return ""+aReply.actions.get(0).rest;
+		}
+		return ""+-1;
 	}
 	
 	

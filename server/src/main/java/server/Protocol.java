@@ -45,7 +45,9 @@ public class Protocol {
 						srv._thread = thread;
 					}
 					publishDevices(reply);
-				} 
+				} else if (reply.actions!=null) {
+					_repliesMap.put(reply.to, reply);
+				}
 			}
 
 		} 
