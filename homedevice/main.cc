@@ -19,6 +19,8 @@
 
 #include <unistd.h>
 
+#include <time.h>
+
 mraa_platform_t platform;
 mraa_gpio_context gpio, gpio_in = NULL;
 
@@ -78,8 +80,11 @@ std::string getDeviceName(){
 }
 
 int waitingTime = 0;
+time_t beginCounter = 0;
 
 void* staticWaitThread(void* pt){
+
+    beginCounter = time(NULL);	
 
     ledstate = 1;        
     mraa_gpio_write(gpio, ledstate); 
@@ -91,16 +96,57 @@ void* staticWaitThread(void* pt){
 
 }
 
-void executeAction(const std::string& id, const std::string& actioncode, int time, net::socketconnect* sock, net::message* msg, const std::string& from){
+void executeAction(const std::string& id, const std::string& actioncode, int timeToWait, net::socketconnect* sock, net::message* msg, const std::string& from){
 
     printf("Trying executing actions #%s#\n",id.c_str());
     if (strcmp(actioncode.c_str(),"activate")==0) {
   
-  	  pthread_t _thread;	  
-    	  waitingTime = time;
-    	  pthread_create(&_thread, NULL, &staticWaitThread, NULL);	
+  	pthread_t _thread;	  
+    	waitingTime = timeToWait;
+    	pthread_create(&_thread, NULL, &staticWaitThread, NULL);	
 	
-    }
+    } 
+    
+    if (strcmp(actioncode.c_str(),"deactivate")==0) {
+        
+	time_t diff =  0;
+	if (beginCounter!=0) {
+	   diff = time(NULL) - beginCounter;
+	}
+	
+	ledstate = 0;        
+        mraa_gpio_write(gpio, ledstate); 
+	
+        std::string name = getDeviceName();
+
+        msg->_type = 1;
+
+        //char tempValueStr[10];
+        //memset(tempValueStr, 0, sizeof(tempValueStr));
+        //sprintf(tempValueStr, "%.2f", tempValueFahrenheit);
+
+        DynamicJsonBuffer jsonNewBuffer;
+
+        JsonObject& rootNew = jsonNewBuffer.createObject();
+        rootNew["from"] = name.c_str();
+        rootNew["to"] = from.c_str();
+
+        JsonArray& arrayData = rootNew.createNestedArray("actions");
+  
+        JsonObject& objectTemperature = jsonNewBuffer.createObject();
+        objectTemperature["rest"] = waitingTime-diff;
+	beginCounter = 0;
+	waitingTime = 0;
+        arrayData.add(objectTemperature);
+  
+        char buffer[500];
+        memset(buffer, 0, sizeof(buffer));
+        rootNew.printTo(buffer, sizeof(buffer));
+
+        msg->_payload = std::string(buffer, strlen(buffer));
+        sock->sendMessage(msg);
+		
+    }	
 	
 }
 
