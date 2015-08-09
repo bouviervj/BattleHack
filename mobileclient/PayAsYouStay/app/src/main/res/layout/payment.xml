@@ -13,7 +13,8 @@
         <NumberPicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/time_hour"/>
+            android:id="@+id/time_hour"
+            android:onClick="updatePrice"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,13 +24,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/time_minute"
-            />
+            android:onClick="updatePrice"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="40px"
             android:text="m"/>
     </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0.0 $"
+        android:textStyle="bold"
+        android:textSize="70px"
+        android:gravity="center"
+        android:id="@+id/price"/>
     <TextView
         android:layout_marginLeft="10px"
         android:layout_width="match_parent"

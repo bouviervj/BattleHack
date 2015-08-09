@@ -16,10 +16,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.payasyoustay.payasyoustay.object.DeviceContent;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class DeviceActivity extends AppCompatActivity {
 
@@ -49,7 +52,7 @@ public class DeviceActivity extends AppCompatActivity {
         priceView.setText(mDevice.pricePerHour.toString() + "$/h");
         TextView remainingTimeView = (TextView)findViewById(R.id.device_remaing_time);
         if (mRole.equals("guest")) {
-            remainingTimeView.setText(mDevice.remainingTime.toString() + " m");
+            remainingTimeView.setText(mDevice.remainingTime.toString() + " h");
         }
         else {
             LinearLayout manageCredit = (LinearLayout) findViewById(R.id.manageCredit);
@@ -67,10 +70,24 @@ public class DeviceActivity extends AppCompatActivity {
         builder.setTitle("Add Credit for " + mDevice.name);
         LayoutInflater inflater = this.getLayoutInflater();
         final View dialogView = inflater.inflate(R.layout.payment, null);
-        NumberPicker hourPicker = (NumberPicker)dialogView.findViewById(R.id.time_hour);
+        final NumberPicker hourPicker = (NumberPicker)dialogView.findViewById(R.id.time_hour);
         hourPicker.setMaxValue(48);
-        NumberPicker minutePicker = (NumberPicker)dialogView.findViewById(R.id.time_minute);
+        final NumberPicker minutePicker = (NumberPicker)dialogView.findViewById(R.id.time_minute);
         minutePicker.setMaxValue(60);
+        final TextView priceView = (TextView) dialogView.findViewById(R.id.price);
+        hourPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                updatePrice(hourPicker.getValue(), minutePicker.getValue(), priceView);
+            }
+        });
+        minutePicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                updatePrice(hourPicker.getValue(), minutePicker.getValue(), priceView);
+            }
+        });
+
         NumberPicker expMonthPicker = (NumberPicker)dialogView.findViewById(R.id.exp_month);
         expMonthPicker.setMaxValue(12);
         expMonthPicker.setMinValue(1);
@@ -143,6 +160,16 @@ public class DeviceActivity extends AppCompatActivity {
         new Api().execute("stop");
     }
 
+    public void updatePrice(int hour, int minute, TextView priceView) {
+
+        // Time Credit
+        Integer timeCredit = hour * 60 + minute;
+
+        // Price amount
+        Double amount = timeCredit / 60 * mDevice.pricePerHour;
+        priceView.setText(String.format("%.2f $", amount));
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -185,11 +212,11 @@ public class DeviceActivity extends AppCompatActivity {
                 }
                 else if(services[0].equals("activate")) {
                     RestClient restClient = new RestClient();
-                    JSONObject json = restClient.get("/ws/api/v1/deviceActivate/" + mDevice.id + "/" + mDevice.remainingTime.toString());
+                    JSONObject json = restClient.get("/ws/api/v1/dev/deviceActivate/" + mDevice.id + "/" + mDevice.remainingTime.toString());
                 }
                 else if(services[0].equals("stop")) {
                     RestClient restClient = new RestClient();
-                    JSONObject json = restClient.get("/ws/api/v1/deviceDeactivate/" + mDevice.id);
+                    JSONObject json = restClient.get("/ws/api/v1/dev/deviceDeactivate/" + mDevice.id);
                 }
                 else if (services[0].equals("getCounters")) {
                     RestClient restClient = new RestClient();
