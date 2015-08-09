@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/battlehack_client
+CMAKE_SOURCE_DIR = /root/BattleHack/homedevice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/battlehack_client
+CMAKE_BINARY_DIR = /root/BattleHack/homedevice
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -E cmake_progress_start /root/battlehack_client/CMakeFiles /root/battlehack_client/lib/extern/json/src/CMakeFiles/progress.marks
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/battlehack_client/CMakeFiles 0
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -E cmake_progress_start /root/BattleHack/homedevice/CMakeFiles /root/BattleHack/homedevice/lib/extern/json/src/CMakeFiles/progress.marks
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/BattleHack/homedevice/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/clean
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/preinstall
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/preinstall
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/rule:
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/rule
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/json/src/CMakeFiles/ArduinoJson.dir/rule
 .PHONY : lib/extern/json/src/CMakeFiles/ArduinoJson.dir/rule
 
 # Convenience name for target.
@@ -109,7 +109,7 @@ ArduinoJson: lib/extern/json/src/CMakeFiles/ArduinoJson.dir/rule
 
 # fast build rule for target.
 ArduinoJson/fast:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build
 .PHONY : ArduinoJson/fast
 
 Arduino/Print.o: Arduino/Print.cpp.o
@@ -117,7 +117,7 @@ Arduino/Print.o: Arduino/Print.cpp.o
 
 # target to build an object file
 Arduino/Print.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.o
 .PHONY : Arduino/Print.cpp.o
 
 Arduino/Print.i: Arduino/Print.cpp.i
@@ -125,7 +125,7 @@ Arduino/Print.i: Arduino/Print.cpp.i
 
 # target to preprocess a source file
 Arduino/Print.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.i
 .PHONY : Arduino/Print.cpp.i
 
 Arduino/Print.s: Arduino/Print.cpp.s
@@ -133,7 +133,7 @@ Arduino/Print.s: Arduino/Print.cpp.s
 
 # target to generate assembly for a file
 Arduino/Print.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Arduino/Print.cpp.s
 .PHONY : Arduino/Print.cpp.s
 
 DynamicJsonBuffer.o: DynamicJsonBuffer.cpp.o
@@ -141,7 +141,7 @@ DynamicJsonBuffer.o: DynamicJsonBuffer.cpp.o
 
 # target to build an object file
 DynamicJsonBuffer.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.o
 .PHONY : DynamicJsonBuffer.cpp.o
 
 DynamicJsonBuffer.i: DynamicJsonBuffer.cpp.i
@@ -149,7 +149,7 @@ DynamicJsonBuffer.i: DynamicJsonBuffer.cpp.i
 
 # target to preprocess a source file
 DynamicJsonBuffer.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.i
 .PHONY : DynamicJsonBuffer.cpp.i
 
 DynamicJsonBuffer.s: DynamicJsonBuffer.cpp.s
@@ -157,7 +157,7 @@ DynamicJsonBuffer.s: DynamicJsonBuffer.cpp.s
 
 # target to generate assembly for a file
 DynamicJsonBuffer.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/DynamicJsonBuffer.cpp.s
 .PHONY : DynamicJsonBuffer.cpp.s
 
 Internals/IndentedPrint.o: Internals/IndentedPrint.cpp.o
@@ -165,7 +165,7 @@ Internals/IndentedPrint.o: Internals/IndentedPrint.cpp.o
 
 # target to build an object file
 Internals/IndentedPrint.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.o
 .PHONY : Internals/IndentedPrint.cpp.o
 
 Internals/IndentedPrint.i: Internals/IndentedPrint.cpp.i
@@ -173,7 +173,7 @@ Internals/IndentedPrint.i: Internals/IndentedPrint.cpp.i
 
 # target to preprocess a source file
 Internals/IndentedPrint.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.i
 .PHONY : Internals/IndentedPrint.cpp.i
 
 Internals/IndentedPrint.s: Internals/IndentedPrint.cpp.s
@@ -181,7 +181,7 @@ Internals/IndentedPrint.s: Internals/IndentedPrint.cpp.s
 
 # target to generate assembly for a file
 Internals/IndentedPrint.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/IndentedPrint.cpp.s
 .PHONY : Internals/IndentedPrint.cpp.s
 
 Internals/JsonParser.o: Internals/JsonParser.cpp.o
@@ -189,7 +189,7 @@ Internals/JsonParser.o: Internals/JsonParser.cpp.o
 
 # target to build an object file
 Internals/JsonParser.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.o
 .PHONY : Internals/JsonParser.cpp.o
 
 Internals/JsonParser.i: Internals/JsonParser.cpp.i
@@ -197,7 +197,7 @@ Internals/JsonParser.i: Internals/JsonParser.cpp.i
 
 # target to preprocess a source file
 Internals/JsonParser.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.i
 .PHONY : Internals/JsonParser.cpp.i
 
 Internals/JsonParser.s: Internals/JsonParser.cpp.s
@@ -205,7 +205,7 @@ Internals/JsonParser.s: Internals/JsonParser.cpp.s
 
 # target to generate assembly for a file
 Internals/JsonParser.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/JsonParser.cpp.s
 .PHONY : Internals/JsonParser.cpp.s
 
 Internals/List.o: Internals/List.cpp.o
@@ -213,7 +213,7 @@ Internals/List.o: Internals/List.cpp.o
 
 # target to build an object file
 Internals/List.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.o
 .PHONY : Internals/List.cpp.o
 
 Internals/List.i: Internals/List.cpp.i
@@ -221,7 +221,7 @@ Internals/List.i: Internals/List.cpp.i
 
 # target to preprocess a source file
 Internals/List.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.i
 .PHONY : Internals/List.cpp.i
 
 Internals/List.s: Internals/List.cpp.s
@@ -229,7 +229,7 @@ Internals/List.s: Internals/List.cpp.s
 
 # target to generate assembly for a file
 Internals/List.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/List.cpp.s
 .PHONY : Internals/List.cpp.s
 
 Internals/Prettyfier.o: Internals/Prettyfier.cpp.o
@@ -237,7 +237,7 @@ Internals/Prettyfier.o: Internals/Prettyfier.cpp.o
 
 # target to build an object file
 Internals/Prettyfier.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.o
 .PHONY : Internals/Prettyfier.cpp.o
 
 Internals/Prettyfier.i: Internals/Prettyfier.cpp.i
@@ -245,7 +245,7 @@ Internals/Prettyfier.i: Internals/Prettyfier.cpp.i
 
 # target to preprocess a source file
 Internals/Prettyfier.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.i
 .PHONY : Internals/Prettyfier.cpp.i
 
 Internals/Prettyfier.s: Internals/Prettyfier.cpp.s
@@ -253,7 +253,7 @@ Internals/Prettyfier.s: Internals/Prettyfier.cpp.s
 
 # target to generate assembly for a file
 Internals/Prettyfier.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/Prettyfier.cpp.s
 .PHONY : Internals/Prettyfier.cpp.s
 
 Internals/QuotedString.o: Internals/QuotedString.cpp.o
@@ -261,7 +261,7 @@ Internals/QuotedString.o: Internals/QuotedString.cpp.o
 
 # target to build an object file
 Internals/QuotedString.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.o
 .PHONY : Internals/QuotedString.cpp.o
 
 Internals/QuotedString.i: Internals/QuotedString.cpp.i
@@ -269,7 +269,7 @@ Internals/QuotedString.i: Internals/QuotedString.cpp.i
 
 # target to preprocess a source file
 Internals/QuotedString.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.i
 .PHONY : Internals/QuotedString.cpp.i
 
 Internals/QuotedString.s: Internals/QuotedString.cpp.s
@@ -277,7 +277,7 @@ Internals/QuotedString.s: Internals/QuotedString.cpp.s
 
 # target to generate assembly for a file
 Internals/QuotedString.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/QuotedString.cpp.s
 .PHONY : Internals/QuotedString.cpp.s
 
 Internals/StringBuilder.o: Internals/StringBuilder.cpp.o
@@ -285,7 +285,7 @@ Internals/StringBuilder.o: Internals/StringBuilder.cpp.o
 
 # target to build an object file
 Internals/StringBuilder.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.o
 .PHONY : Internals/StringBuilder.cpp.o
 
 Internals/StringBuilder.i: Internals/StringBuilder.cpp.i
@@ -293,7 +293,7 @@ Internals/StringBuilder.i: Internals/StringBuilder.cpp.i
 
 # target to preprocess a source file
 Internals/StringBuilder.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.i
 .PHONY : Internals/StringBuilder.cpp.i
 
 Internals/StringBuilder.s: Internals/StringBuilder.cpp.s
@@ -301,7 +301,7 @@ Internals/StringBuilder.s: Internals/StringBuilder.cpp.s
 
 # target to generate assembly for a file
 Internals/StringBuilder.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/Internals/StringBuilder.cpp.s
 .PHONY : Internals/StringBuilder.cpp.s
 
 JsonArray.o: JsonArray.cpp.o
@@ -309,7 +309,7 @@ JsonArray.o: JsonArray.cpp.o
 
 # target to build an object file
 JsonArray.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.o
 .PHONY : JsonArray.cpp.o
 
 JsonArray.i: JsonArray.cpp.i
@@ -317,7 +317,7 @@ JsonArray.i: JsonArray.cpp.i
 
 # target to preprocess a source file
 JsonArray.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.i
 .PHONY : JsonArray.cpp.i
 
 JsonArray.s: JsonArray.cpp.s
@@ -325,7 +325,7 @@ JsonArray.s: JsonArray.cpp.s
 
 # target to generate assembly for a file
 JsonArray.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonArray.cpp.s
 .PHONY : JsonArray.cpp.s
 
 JsonBuffer.o: JsonBuffer.cpp.o
@@ -333,7 +333,7 @@ JsonBuffer.o: JsonBuffer.cpp.o
 
 # target to build an object file
 JsonBuffer.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.o
 .PHONY : JsonBuffer.cpp.o
 
 JsonBuffer.i: JsonBuffer.cpp.i
@@ -341,7 +341,7 @@ JsonBuffer.i: JsonBuffer.cpp.i
 
 # target to preprocess a source file
 JsonBuffer.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.i
 .PHONY : JsonBuffer.cpp.i
 
 JsonBuffer.s: JsonBuffer.cpp.s
@@ -349,7 +349,7 @@ JsonBuffer.s: JsonBuffer.cpp.s
 
 # target to generate assembly for a file
 JsonBuffer.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonBuffer.cpp.s
 .PHONY : JsonBuffer.cpp.s
 
 JsonObject.o: JsonObject.cpp.o
@@ -357,7 +357,7 @@ JsonObject.o: JsonObject.cpp.o
 
 # target to build an object file
 JsonObject.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.o
 .PHONY : JsonObject.cpp.o
 
 JsonObject.i: JsonObject.cpp.i
@@ -365,7 +365,7 @@ JsonObject.i: JsonObject.cpp.i
 
 # target to preprocess a source file
 JsonObject.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.i
 .PHONY : JsonObject.cpp.i
 
 JsonObject.s: JsonObject.cpp.s
@@ -373,7 +373,7 @@ JsonObject.s: JsonObject.cpp.s
 
 # target to generate assembly for a file
 JsonObject.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonObject.cpp.s
 .PHONY : JsonObject.cpp.s
 
 JsonVariant.o: JsonVariant.cpp.o
@@ -381,7 +381,7 @@ JsonVariant.o: JsonVariant.cpp.o
 
 # target to build an object file
 JsonVariant.cpp.o:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.o
 .PHONY : JsonVariant.cpp.o
 
 JsonVariant.i: JsonVariant.cpp.i
@@ -389,7 +389,7 @@ JsonVariant.i: JsonVariant.cpp.i
 
 # target to preprocess a source file
 JsonVariant.cpp.i:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.i
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.i
 .PHONY : JsonVariant.cpp.i
 
 JsonVariant.s: JsonVariant.cpp.s
@@ -397,7 +397,7 @@ JsonVariant.s: JsonVariant.cpp.s
 
 # target to generate assembly for a file
 JsonVariant.cpp.s:
-	cd /root/battlehack_client && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.s
+	cd /root/BattleHack/homedevice && $(MAKE) -f lib/extern/json/src/CMakeFiles/ArduinoJson.dir/build.make lib/extern/json/src/CMakeFiles/ArduinoJson.dir/JsonVariant.cpp.s
 .PHONY : JsonVariant.cpp.s
 
 # Help Target
@@ -456,6 +456,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

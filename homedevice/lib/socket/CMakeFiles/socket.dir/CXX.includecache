@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/battlehack_client/lib/socket/socket.cpp
+/root/BattleHack/homedevice/lib/socket/socket.cpp
 lib/socket/socket.h
 -
 sys/socket.h

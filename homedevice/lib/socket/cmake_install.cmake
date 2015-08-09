@@ -1,4 +1,4 @@
-# Install script for directory: /root/battlehack_client/lib/socket
+# Install script for directory: /root/BattleHack/homedevice/lib/socket
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

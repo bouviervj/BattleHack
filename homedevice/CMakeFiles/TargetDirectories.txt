@@ -1,0 +1,3 @@
+/root/BattleHack/homedevice/lib/extern/json/src/CMakeFiles/ArduinoJson.dir
+/root/BattleHack/homedevice/CMakeFiles/main.dir
+/root/BattleHack/homedevice/lib/socket/CMakeFiles/socket.dir

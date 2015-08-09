@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/battlehack_client
+CMAKE_SOURCE_DIR = /root/BattleHack/homedevice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/battlehack_client
+CMAKE_BINARY_DIR = /root/BattleHack/homedevice
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -E cmake_progress_start /root/battlehack_client/CMakeFiles /root/battlehack_client/lib/extern/CMakeFiles/progress.marks
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/battlehack_client/CMakeFiles 0
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -E cmake_progress_start /root/BattleHack/homedevice/CMakeFiles /root/BattleHack/homedevice/lib/extern/CMakeFiles/progress.marks
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/BattleHack/homedevice/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/clean
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,17 +85,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/preinstall
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/battlehack_client && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/preinstall
+	cd /root/BattleHack/homedevice && $(MAKE) -f CMakeFiles/Makefile2 lib/extern/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -117,6 +117,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/battlehack_client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/BattleHack/homedevice && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

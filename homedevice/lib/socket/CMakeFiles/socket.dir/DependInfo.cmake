@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/root/battlehack_client/lib/socket/socket.cpp" "/root/battlehack_client/lib/socket/CMakeFiles/socket.dir/socket.cpp.o"
+  "/root/BattleHack/homedevice/lib/socket/socket.cpp" "/root/BattleHack/homedevice/lib/socket/CMakeFiles/socket.dir/socket.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

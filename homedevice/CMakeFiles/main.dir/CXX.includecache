@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/BattleHack/homedevice/main.cc
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+lib/socket/socket.h
+-
+lib/extern/json/include/ArduinoJson.h
+-
+mraa/gpio.h
+/root/BattleHack/homedevice/mraa/gpio.h
+mraa/aio.h
+/root/BattleHack/homedevice/mraa/aio.h
+sys/types.h
+-
+sys/socket.h
+-
+sys/ioctl.h
+-
+netinet/in.h
+-
+net/if.h
+-
+arpa/inet.h
+-
+math.h
+-
+unistd.h
+-
+

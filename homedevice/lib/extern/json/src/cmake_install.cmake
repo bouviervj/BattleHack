@@ -1,4 +1,4 @@
-# Install script for directory: /root/battlehack_client/lib/extern/json/src
+# Install script for directory: /root/BattleHack/homedevice/lib/extern/json/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

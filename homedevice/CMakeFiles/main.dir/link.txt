@@ -1,0 +1,1 @@
+/usr/bin/c++    -fstack-protector-all -fPIC -finstrument-functions     CMakeFiles/main.dir/main.cc.o  -o main -rdynamic lib/socket/libsocket.a lib/libArduinoJson.a -lmraa -lpthread 

@@ -17,6 +17,8 @@
 #include <arpa/inet.h>
 #include <math.h>
 
+#include <unistd.h>
+
 mraa_platform_t platform;
 mraa_gpio_context gpio, gpio_in = NULL;
 
@@ -66,34 +68,38 @@ int init(){
     }
 
     mraa_gpio_dir(gpio, MRAA_GPIO_OUT);
+    
+    mraa_gpio_write(gpio, 0); 
 	
-
 }
 
 std::string getDeviceName(){
  return deviceID;
 }
 
-void executeAction(const std::string& type, const std::string& actioncode, net::socketconnect* sock, net::message* msg, const std::string& from){
+int waitingTime = 0;
 
-    printf("Trying executing actions #%s#\n",type.c_str());
-    if (strcmp(type.c_str(),"light")==0) {
+void* staticWaitThread(void* pt){
 
-	if (strcmp(actioncode.c_str(),"on")==0){
-          ledstate = 0;        
-          mraa_gpio_write(gpio, !ledstate); 
-        } else if (strcmp(actioncode.c_str(),"off")==0){
-          ledstate = 1;
-          mraa_gpio_write(gpio, !ledstate);          
-        } else if (strcmp(actioncode.c_str(),"switch")==0){
-          printf("switch light\n");
-    	  if (gpio_in != NULL && mraa_gpio_read(gpio_in) == 0) {
-             return;
-          }
-          ledstate = !ledstate;
-          mraa_gpio_write(gpio, !ledstate);
-	}
+    ledstate = 1;        
+    mraa_gpio_write(gpio, ledstate); 
+    
+    sleep(waitingTime);	
+    
+    ledstate = 0;        
+    mraa_gpio_write(gpio, ledstate); 
 
+}
+
+void executeAction(const std::string& id, const std::string& actioncode, int time, net::socketconnect* sock, net::message* msg, const std::string& from){
+
+    printf("Trying executing actions #%s#\n",id.c_str());
+    if (strcmp(actioncode.c_str(),"activate")==0) {
+  
+  	  pthread_t _thread;	  
+    	  waitingTime = time;
+    	  pthread_create(&_thread, NULL, &staticWaitThread, NULL);	
+	
     }
 	
 }
@@ -118,10 +124,14 @@ void callbackReceiveMessage(net::socketconnect* sock, net::message* msg){
 	  const char* from = root["from"];
 
 	  for (int i=0; i<nestedArray.size(); i++) {
-	     const char* type = nestedArray[i]["type"];
-	     printf("Trying executing actions %s\n",type);
+	     const char* id = nestedArray[i]["id"];
+	     printf("Trying executing actions on device %s\n",id);
              const char* actioncode = nestedArray[i]["actioncode"];
-	     executeAction(std::string(type), std::string(actioncode), sock, msg, std::string(from));
+	     printf("Trying executing action code %s\n",actioncode);
+	     const int time = nestedArray[i]["time"];
+	     printf("Trying for %d secondes\n",time);
+	     
+	     executeAction(std::string(id), std::string(actioncode), time, sock, msg, std::string(from));
 	  }
 	
 	} else {
