@@ -44,17 +44,20 @@ public class DeviceListActivity extends AppCompatActivity implements AbsListView
      * Views.
      */
     private ListAdapter mAdapter;
+    private int mSectionNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_devise_list);
-        new Api(this).execute("/ws/api/v1/dev/devices");
+        new Api(this).execute("getDevices");
+        new Api(this).execute("getCounters");
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null && bundle.containsKey("position")) {
             int position = bundle.getInt("position");
-            mHouse = HouseContent.ITEMS.get(position);
+            mSectionNumber = bundle.getInt("section_number");
+            mHouse = mSectionNumber == 1 ? HouseContent.ITEMS_HOST.get(position) : HouseContent.ITEMS_GUEST.get(position);
         }
 
         mListView = (ListView) findViewById(android.R.id.list);
@@ -62,11 +65,16 @@ public class DeviceListActivity extends AppCompatActivity implements AbsListView
 
     }
 
+    public void refresh(MenuItem item) {
+        new Api(this).execute("getDevices");
+        new Api(this).execute("getCounters");
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_house, menu);
+        getMenuInflater().inflate(R.menu.menu_house, menu);
         return true;
     }
 
@@ -90,6 +98,7 @@ public class DeviceListActivity extends AppCompatActivity implements AbsListView
         Intent intent = new Intent(this, DeviceActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("position", position);
+        bundle.putString("role", mSectionNumber == 1 ? "host" : "guest");
         intent.putExtras(bundle);
         startActivity(intent);
     }
@@ -112,7 +121,7 @@ public class DeviceListActivity extends AppCompatActivity implements AbsListView
             TextView textView = (TextView) rowView.findViewById(R.id.device);
             ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
             DeviceContent.Device device = values.get(position);
-            textView.setText(device.toString());
+            textView.setText(mSectionNumber == 1 ? device.name + "\n" + device.pricePerHour + "$/h":device.toString());
 
             Log.d("DeviceList", device.type);
             if (device.type.equals("ac")) {
@@ -130,13 +139,21 @@ public class DeviceListActivity extends AppCompatActivity implements AbsListView
         public Api(Context context) {
             this.mContext = context;
         }
-        protected JSONObject doInBackground(String... urls) {
+        protected JSONObject doInBackground(String... services) {
             try {
 
-            RestClient restClient = new RestClient();
-            JSONObject json = restClient.get(urls[0]);
-            DeviceContent.update(json);
-            return json;
+
+                RestClient restClient = new RestClient();
+                JSONObject json = new JSONObject();
+                if (services[0].equals("getDevices")) {
+                    JSONObject jsonDevices = restClient.get("/ws/api/v1/dev/devices");
+                    DeviceContent.update(jsonDevices);
+                }
+                else if (services[0].equals("getCounters")) {
+                    JSONObject jsonCoutners = restClient.get("/ws/api/v1/counter/listCounters");
+                    DeviceContent.updateCounters(jsonCoutners);
+                }
+                return json;
             }
             catch (Exception e) {
                 Log.e("DeviceList", e.toString());
