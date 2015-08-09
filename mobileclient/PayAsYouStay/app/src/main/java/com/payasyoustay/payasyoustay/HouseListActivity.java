@@ -1,5 +1,7 @@
 package com.payasyoustay.payasyoustay;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import android.content.Intent;
@@ -26,6 +28,7 @@ import com.payasyoustay.payasyoustay.object.HouseContent;
 
 public class HouseListActivity extends AppCompatActivity implements ActionBar.TabListener {
 
+    static String mUser;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -45,6 +48,11 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_house_list);
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null && bundle.containsKey("user")) {
+            mUser = bundle.getString("user");
+        }
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -80,6 +88,7 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
                             .setTabListener(this));
         }
     }
+
 
 
     @Override
@@ -153,6 +162,8 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
             }
             return null;
         }
+
+
     }
 
     /**
@@ -165,6 +176,7 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
 
+        private int mSectionNumber;
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -194,10 +206,12 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+            mSectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
             final View rootView = inflater.inflate(R.layout.fragment_house_list, container, false);
             mListView = (ListView) rootView.findViewById(R.id.house_list);
             mAdapter = new ArrayAdapter<HouseContent.House>(getActivity(),
-                    android.R.layout.simple_list_item_1, android.R.id.text1, HouseContent.ITEMS);
+                    android.R.layout.simple_list_item_1, android.R.id.text1,
+                    mSectionNumber == 1 ? mUser.toLowerCase().equals("roger") ? HouseContent.ITEMS_HOST : new ArrayList<HouseContent.House>() : mUser.toLowerCase().equals("simon") ? HouseContent.ITEMS_GUEST : new ArrayList<HouseContent.House>());
             mListView.setAdapter(mAdapter);
 
             // Set OnItemClickListener so we can be notified on item clicks
@@ -211,6 +225,7 @@ public class HouseListActivity extends AppCompatActivity implements ActionBar.Ta
             Intent intent = new Intent(getActivity(), DeviceListActivity.class);
             Bundle bundle = new Bundle();
             bundle.putInt("position", position);
+            bundle.putInt("section_number", mSectionNumber);
             intent.putExtras(bundle);
             getActivity().startActivity(intent);
         }

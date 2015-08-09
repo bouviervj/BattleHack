@@ -2,8 +2,11 @@ package com.payasyoustay.payasyoustay;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,9 +24,13 @@ import android.widget.Toast;
 import com.payasyoustay.payasyoustay.object.DeviceContent;
 import com.payasyoustay.payasyoustay.object.HouseContent;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
 import java.util.List;
 
-public class DeviceListActivity extends ListActivity implements AbsListView.OnItemClickListener {
+public class DeviceListActivity extends AppCompatActivity implements AbsListView.OnItemClickListener {
 
     private HouseContent.House mHouse;
 
@@ -37,25 +44,37 @@ public class DeviceListActivity extends ListActivity implements AbsListView.OnIt
      * Views.
      */
     private ListAdapter mAdapter;
+    private int mSectionNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_devise_list);
+        new Api(this).execute("getDevices");
+        new Api(this).execute("getCounters");
 
         Bundle bundle = getIntent().getExtras();
-        int position = bundle.getInt("position");
-        mHouse = HouseContent.ITEMS.get(position);
+        if (bundle != null && bundle.containsKey("position")) {
+            int position = bundle.getInt("position");
+            mSectionNumber = bundle.getInt("section_number");
+            mHouse = mSectionNumber == 1 ? HouseContent.ITEMS_HOST.get(position) : HouseContent.ITEMS_GUEST.get(position);
+        }
 
-        mAdapter = new DeviceArrayAdapter(this, DeviceContent.ITEMS);
-        setListAdapter(mAdapter);
+        mListView = (ListView) findViewById(android.R.id.list);
+        mListView.setOnItemClickListener(this);
+
+    }
+
+    public void refresh(MenuItem item) {
+        new Api(this).execute("getDevices");
+        new Api(this).execute("getCounters");
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_house, menu);
+        getMenuInflater().inflate(R.menu.menu_house, menu);
         return true;
     }
 
@@ -76,7 +95,12 @@ public class DeviceListActivity extends ListActivity implements AbsListView.OnIt
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Intent intent = new Intent(this, DeviceActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("position", position);
+        bundle.putString("role", mSectionNumber == 1 ? "host" : "guest");
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 
     public class DeviceArrayAdapter extends ArrayAdapter<DeviceContent.Device> {
@@ -97,10 +121,10 @@ public class DeviceListActivity extends ListActivity implements AbsListView.OnIt
             TextView textView = (TextView) rowView.findViewById(R.id.device);
             ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
             DeviceContent.Device device = values.get(position);
-            textView.setText(device.toString());
+            textView.setText(mSectionNumber == 1 ? device.name + "\n" + device.pricePerHour + "$/h":device.toString());
 
-
-            if (device.type == "ac") {
+            Log.d("DeviceList", device.type);
+            if (device.type.equals("ac")) {
                 imageView.setImageResource(R.drawable.ac);
             } else {
                 imageView.setImageResource(R.drawable.light);
@@ -108,4 +132,41 @@ public class DeviceListActivity extends ListActivity implements AbsListView.OnIt
             return rowView;
         }
     }
+    public class Api extends AsyncTask<String, Void, JSONObject> {
+
+        Context mContext;
+
+        public Api(Context context) {
+            this.mContext = context;
+        }
+        protected JSONObject doInBackground(String... services) {
+            try {
+
+
+                RestClient restClient = new RestClient();
+                JSONObject json = new JSONObject();
+                if (services[0].equals("getDevices")) {
+                    JSONObject jsonDevices = restClient.get("/ws/api/v1/dev/devices");
+                    DeviceContent.update(jsonDevices);
+                }
+                else if (services[0].equals("getCounters")) {
+                    JSONObject jsonCoutners = restClient.get("/ws/api/v1/counter/listCounters");
+                    DeviceContent.updateCounters(jsonCoutners);
+                }
+                return json;
+            }
+            catch (Exception e) {
+                Log.e("DeviceList", e.toString());
+            }
+            return new JSONObject();
+        }
+
+    protected void onPostExecute(JSONObject result) {
+        Log.d("DeviceList", "onPostExecute");
+        mAdapter = new DeviceArrayAdapter(mContext, DeviceContent.ITEMS);
+        mListView.setAdapter(mAdapter);
+    }
+
+    }
+
 }

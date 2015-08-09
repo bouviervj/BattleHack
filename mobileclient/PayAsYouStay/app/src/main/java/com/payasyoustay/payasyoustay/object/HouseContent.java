@@ -1,9 +1,7 @@
 package com.payasyoustay.payasyoustay.object;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -16,17 +14,23 @@ public class HouseContent {
     /**
      * An array of sample (dummy) items.
      */
-    public static List<House> ITEMS = new ArrayList<House>();
+    public static List<House> ITEMS_HOST = new ArrayList<House>();
+    public static List<House> ITEMS_GUEST = new ArrayList<House>();
 
 
     static {
         // Add 3 sample items.
-        addItem(new House("Cap Cod", "282 Bradford St, Provincetown, MA 02657"));
-        addItem(new House("New York City", "Times Square Manhattan New York, NY 10036"));
+        addItem(new House("Cap Cod", "282 Bradford St, Provincetown, MA 02657"), true, false);
+        addItem(new House("New York City", "Times Square Manhattan New York, NY 10036"), true, true);
     }
 
-    private static void addItem(House item) {
-        ITEMS.add(item);
+    private static void addItem(House item, boolean owner, boolean guest) {
+        if (owner) {
+            ITEMS_HOST.add(item);
+        }
+        if (guest) {
+            ITEMS_GUEST.add(item);
+        }
     }
 
     /**

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
@@ -41,6 +42,10 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view) {
         if (true) {
             Intent intent = new Intent(this, HouseListActivity.class);
+            Bundle bundle = new Bundle();
+            TextView userTextView = (TextView)findViewById(R.id.user);
+            bundle.putString("user", userTextView.getText().toString());
+            intent.putExtras(bundle);
             startActivity(intent);
         }
         else {
